@@ -1,22 +1,13 @@
 <script type="text/discourse-plugin" version="0.8.23">
   var socprov = settings.social_share_links,
-    id: settings.social_id,
     sec = $.map(socprov.split("|"), $.trim);
-    icon: settings.social_icon,
   
-    title: "",
   $.each(sec, function(value) {
-    generateUrl: function(link, title) {
     var sec = $.map(this.split(","), $.trim);
-      return settings.social_link + encodeURIComponent(link)  + "&title=" + encodeURIComponent(title);
     api.addPostMenuButton({
-    },
       id: sec[0],
-    shouldOpenInPopup: true,
       icon: sec[1].toLowerCase(),
-    popupHeight: 265
       title: sec[2],
-  })
       generateUrl: function(link, title) {
         return (sec[3] + encodeURIComponent(link) + "&title=" + encodeURIComponent(title));
       },
@@ -24,4 +15,4 @@
       popupHeight: 265
     });
   });
-  </script>
+</script>
