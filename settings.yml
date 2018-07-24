@@ -1,4 +1,4 @@
-User_Menu_links:
+UserMenu_links:
   type: list
   default: ""
   description: 
