@@ -1,4 +1,4 @@
-social_share_links:
+settings.UserMenu_links:
   type: list
   default: ""
   description: 
